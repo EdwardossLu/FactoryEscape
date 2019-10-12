@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class PlatformFollow : MonoBehaviour {
 
-    GameObject myPlayer;
+    GameObject _myPlayer;
     [HideInInspector] public bool hasPlayerEntered = false;
 
 	// Use this for initialization
-	void Start () {
-        myPlayer = GameObject.Find("Player");
+    private void Start () {
+        _myPlayer = GameObject.Find("Player");
         hasPlayerEntered = false;
     }
 	
 	// Update is called once per frame
-	void Update () {
+    private void Update () {
 		if (!hasPlayerEntered)
         {
-            transform.position = new Vector3(myPlayer.gameObject.transform.position.x, transform.position.y, transform.position.z);
+            Vector3 position = transform.position;
+            position = new Vector3(_myPlayer.gameObject.transform.position.x, position.y, position.z);
+            transform.position = position;
         }
 	}
 }

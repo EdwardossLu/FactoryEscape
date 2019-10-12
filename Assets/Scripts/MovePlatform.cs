@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovePlatform : MonoBehaviour {
-
-    //public PlatformManager platformManager;
-
-    private float speed;
+public class MovePlatform : MonoBehaviour 
+{
+    private float _speed;
 
     private void Start()
     {
-        speed = -PlatformManager.platSpeed;
+        _speed = -PlatformManager.platSpeed;
     }
 
     //Moves the platform backwards.
-    void Update () {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+    private void Update () 
+    {
+        transform.Translate(_speed * Time.deltaTime * Vector3.forward);
     }
 }

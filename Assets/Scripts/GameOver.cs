@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-
     // 0 = Main Menu.
     // 1 = Game
     // 2 = End Screen.
@@ -13,7 +12,7 @@ public class GameOver : MonoBehaviour
     // 4 = Achievemenets
     // 5 = Settlement
 
-    private bool isPaused = false;
+    private bool _isPaused = false;
 
     #region Buttons
 
@@ -34,15 +33,15 @@ public class GameOver : MonoBehaviour
 
     public void PauseGame()
     {
-        if (isPaused)
+        if (_isPaused)
         {
             Time.timeScale = 1;
-            isPaused = false;
+            _isPaused = false;
         }
         else
         {
             Time.timeScale = 0;
-            isPaused = true;
+            _isPaused = true;
         }
     }
 

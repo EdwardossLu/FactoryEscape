@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class CosmeticManager : MonoBehaviour
 {
-
     public GameObject cos1;
     public GameObject cos2;
 
-    private static int selection = 0;
+    private static int _selection = 0;
 
-	void Update ()
+	private void Update ()
     {
         CosmeticChanges();
         NumberManager();
         //Debug.Log(selection);
     }
 
-    void CosmeticChanges()
+    private void CosmeticChanges()
     {
-        switch (selection)
+        switch (_selection)
         {
             case 1:
                 cos1.SetActive(true);
@@ -36,22 +35,22 @@ public class CosmeticManager : MonoBehaviour
         }
     }
 
-    void NumberManager()
+    private static void NumberManager()
     {
-        if (selection <= 1)
-            selection = 1;
+        if (_selection <= 1)
+            _selection = 1;
 
-        if (selection >= 2)
-            selection = 2;
+        if (_selection >= 2)
+            _selection = 2;
     }
 
     public void SelectUp()
     {
-        ++selection;
+        ++_selection;
     }
 
     public void SelectDown()
     {
-        --selection;
+        --_selection;
     }
 }

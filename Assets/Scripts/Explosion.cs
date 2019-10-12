@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
+    private Rigidbody _rb;
+    private const float Speed = 10000f;
 
-    Rigidbody rb;
-    private float speed = 10000f;
-
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+	private void Start ()
     {
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
 
-        rb.AddForce(transform.forward * speed);
+        _rb.AddForce(transform.forward * Speed);
 	}
 
 }

@@ -4,19 +4,11 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-
     public UIManager uIManager;
     public float distanceUI;
 
-
-    // Use this for initialization
-    void Start ()
-    {
-
-    }
-	
 	// Update is called once per frame
-	void Update ()
+    private void Update ()
     {
         Quest();
         //Debug.Log(distanceUI);
@@ -24,6 +16,6 @@ public class QuestManager : MonoBehaviour
 
     void Quest()
     {
-
+        // TODO: Quest mechanic.
     }
 }

@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class CoinPickup : MonoBehaviour
 {
-
     public UIManager uIManager;
     public PlayCoinAudio playCoinAudio;
 
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.CompareTag("Player"))
         {
             //playCoinAudio.CoinCollected();
             uIManager.UpdateCurrency();
