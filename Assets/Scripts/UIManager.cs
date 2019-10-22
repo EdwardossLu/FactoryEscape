@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        distanceUI.text = "Distances: "+ ((int)distance).ToString() + "m";
+        distanceUI.text = "Distance: "+ ((int)distance).ToString() + "m";
         currencyUI.text = "Coins: " + collectedCurrency.ToString();
     }
 
